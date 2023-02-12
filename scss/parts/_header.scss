@@ -1,0 +1,65 @@
+// Gestion du logo
+.logo {
+  min-width: 11rem;
+}
+
+// Creation du switch
+.toggle {
+  display: flex;
+}
+
+.toggle-icons {
+  height: 24px;
+}
+.switch {
+  display: inline-block;
+  position: relative;
+  width: 48px;
+  height: 24px;
+  cursor: pointer;
+  overflow: hidden;
+  margin-inline: 1.6rem;
+}
+
+.switch input {
+  position: absolute;
+  top: -30px;
+  left: -30px;
+  width: 0;
+  height: 0;
+}
+
+.switch input + span {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: $white;
+  border-radius: 20px;
+}
+
+.switch input:checked + span {
+  background: $white;
+}
+
+.switch input + span:before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 4px;
+  width: 20px;
+  height: 20px;
+  background: $violet;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  transition: all .5s;
+}
+
+.switch input:checked + span:before {
+  left: 24px;
+}
+
+
+
