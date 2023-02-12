@@ -1,0 +1,59 @@
+/* Kumbh Sans / Regular - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'kumbh';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+  url('../assets/fonts/static/KumbhSans-Regular.ttf') format('ttf');
+}
+
+/* Kumbh Sans / Bold - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'kumbh';
+  font-style: Bold;
+  font-weight: 700;
+  src: local(''),
+  url('../assets/fonts/static/KumbhSans-SemiBold.ttf') format('ttf');
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--title);
+}
+
+h1 {
+  font-size: 2.8rem;
+  line-height: 3.4rem;
+}
+
+h2, {
+  font-size: 2.4rem;
+  line-height: 2.9rem;
+}
+
+h3,
+.h3-like {
+  font-size: 2rem;
+  line-height: 2.4rem;
+}
+
+h4 {
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+}
+
+p {
+  color: var(--txt);
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+}
+
+span {
+  color: var(--txt);
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+}

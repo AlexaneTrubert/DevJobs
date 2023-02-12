@@ -1,0 +1,23 @@
+.btn {
+  display: inline-block;
+  padding-inline: 3.7rem;
+  padding-bottom: 1.1rem;
+  padding-top: 1.6rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  &-primary {
+    color: $white;
+    background-color: $violet;
+    &:is(:hover, :focus){
+      background-color: $light-violet;
+    }
+  }
+  &-secondary {
+    color: $violet;
+    background-color: rgb($violet, .1);
+    &:is(:hover, :focus){
+      background-color: rgb($violet, .35);
+    }
+  }
+}

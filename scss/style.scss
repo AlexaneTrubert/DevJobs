@@ -12,3 +12,16 @@
 @import 'parts/footer';
 @import 'parts/form';
 @import 'parts/header';
+
+.grid {
+  display: grid;
+  @include card-sm {
+    grid-template-columns: 1fr;
+  }
+  @include card-md {
+    grid-template-columns: repeat(2,1fr);
+  }
+  @include card-lg {
+    grid-template-columns: repeat(3,1fr);
+  }
+}
