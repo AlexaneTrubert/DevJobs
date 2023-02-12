@@ -10,6 +10,62 @@
     <link rel="shortcut icon" href="assets/favicon-32x32.png" type="image/png">
 </head>
 <body>
+<ul class="skip">
+    <li class="skip-item"><a href="" class="skip-link"></a></li>
+    <li class="skip-item"><a href="#main-content" class="skip-link"></a></li>
+</ul>
 
+<header class="main-header">
+    <div class="container">
+        <div class="logo">
+            <a href="index.html"><img src="assets/logo.svg" alt="" class="logo-img"></a>
+        </div>
+        <div class="switch">
+            <label class="toggle">
+                <input type="checkbox">
+                <span></span>
+            </label>
+        </div>
+    </div>
+</header>
+
+<main class="main-content" id="main-content">
+    <h1 class="screen-reader-text">Devjobs</h1>
+    <section class="search-form">
+        <div class="container search-container">
+            <form action="">
+                <label for="search">Search</label>
+                <input type="text" name="search" id="search" placeholder="Filter by title..." required>
+
+                <label for="location">Location</label>
+                <input type="text" name="location" id="location" placeholder="Filter by location...">
+
+                <label for="time">Full time</label>
+                <input type="checkbox" name="time" id="time" placeholder="">
+
+                <a href="#" class="btn"><img src="assets/icons/icon-filter.svg" alt="" width="25px"></a>
+                <button type="submit">Rechercher</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="cards-grid">
+        <div class="container">
+            <ul class="cards-list">
+                <li class="card-item">
+                    <a href="item.html" alt=""><h2 class="h3-like card-title">Senior software Engineer</h2></a>
+                    <img src="assets/images/scoot.svg" alt="Logo de l'entreprise de Scoot" style="background-color: green">
+                    <span class="meta">xh ago</span> &middot; <span class="category">Full Time</span>
+                    <p>Scoot</p>
+                    <a href="#" class="card-link_location">United Kingdom</a>
+                </li>
+            </ul>
+
+            <!-- Ajout du bouton pour charger d'autres éléments -->è
+            <button type="button">Load More</button>
+        </div>
+    </section>
+
+</main>
 </body>
 </html>
