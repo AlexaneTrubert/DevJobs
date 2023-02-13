@@ -1,6 +1,6 @@
 body {
   font-family: kumbh, sans-serif;
-  background-color: $light-grey;
+  background-color: $bg;
 }
 
 .container {
@@ -36,18 +36,10 @@ body {
   }
 }
 
-.header-container {
-  width: 100%;
-  margin-inline: auto;
-  padding-inline: 2.4rem;
-  display: flex;
-  justify-content: space-between;
-  padding-top: 3.2rem;
-  padding-bottom: 3.2rem;;
-}
+
 
 // Cards grid
 .cards-grid {
-  margin-top: 3.2rem;
+  margin-top: 6rem;
   margin-bottom: 6.2rem;
 }

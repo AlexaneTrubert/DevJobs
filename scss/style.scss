@@ -4,6 +4,7 @@
 @import 'helpers';
 @import 'typography';
 @import 'layout';
+@import 'components/nav';
 @import 'components/alerts';
 @import 'components/btn';
 @import 'components/card';
@@ -28,4 +29,9 @@
     grid-template-columns: repeat(3,1fr);
     column-gap: 3rem;
   }
+}
+
+button {
+  border: none;
+  background: transparent;
 }

@@ -1,25 +1,13 @@
 .main-form {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
-  background-color: $white;
+  background-color: $primary;
   padding-inline: 2.4rem 1.6rem;
   padding-top: 1.6rem;
   padding-bottom: 1.6rem;
   border-radius: 6px;
 }
 
-.filter {
-  background-color: transparent;
-  border: none;
-  align-self: center;
-}
-
-.filter-title {
-  order: -1;
-  border: none;
-}
-
-input[placeholder] {
-  font-family: kumbh, sans-serif;
-  font-size: 1.6rem;
+.icon-color {
+  fill: $icon;
 }

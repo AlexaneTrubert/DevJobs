@@ -22,7 +22,7 @@ h1,
 h2,
 h3,
 h4 {
-  color: $dark-blue;
+  color: $secondary;
 }
 
 h1 {
@@ -48,13 +48,13 @@ h4 {
 }
 
 p {
-  color: var(--txt);
+  color: $ter;
   font-size: 1.6rem;
   line-height: 2.6rem;
 }
 
 span {
-  color: var(--txt);
+  color: $ter;
   font-size: 1.6rem;
   line-height: 2.6rem;
 }

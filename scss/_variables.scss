@@ -1,18 +1,49 @@
-$violet: rgb(89, 100, 224);
-$light-violet: rgb(147, 155, 244);
-$dark-blue: rgb(25, 32, 45);
-$midnight: rgb(18, 23, 33);
-$white: rgb(255, 255, 255);
-$light-grey: rgb(244, 246, 248);
-$grey:  rgb(157, 174, 194);
-$dark-grey: rgb(110, 128, 152);
-
 $sm: 36em;
 $md: 48em;
 $lg: 62em;
 $xl: 75em;
 
+@media (prefers-color-scheme: dark) {
   :root {
-    --title: rgb(25, 32, 45)e;
-    --txt: rgb(110, 128, 152);
+    --primary: rgb(25, 32, 45);
+    --secondary: rgb(255, 255, 255);
+    --ter: rgb(110, 128, 152);
+    --background: rgb(18, 23, 33);
+    --icon: rgb(255, 255, 255);
+  }
 }
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --primary: rgb(255, 255, 255);
+    --secondary: rgb(25, 32, 45);
+    --ter: rgb(157, 174, 194);
+    --background: rgb(244, 246, 248);
+    --icon: rgb(157, 174, 194);
+  }
+}
+
+html.dark {
+  --primary: rgb(25, 32, 45);
+  --secondary: rgb(255, 255, 255);
+  --ter: rgb(110, 128, 152);
+  --background: rgb(18, 23, 33);
+  --icon: rgb(255, 255, 255);
+}
+
+html.light {
+  --primary: rgb(255, 255, 255);
+  --secondary: rgb(25, 32, 45);
+  --ter: rgb(157, 174, 194);
+  --background: rgb(244, 246, 248);
+  --icon: rgb(157, 174, 194);
+}
+
+$primary: var(--primary);
+$secondary: var(--secondary);
+$ter: var(--ter);
+$bg: var(--background);
+$violet: rgb(89, 100, 224);
+$light-violet: rgb(147, 155, 244);
+$white: rgb(255, 255, 255);
+$icon: var(--icon);
