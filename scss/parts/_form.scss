@@ -1,0 +1,14 @@
+.btn-search span {
+  display: none;
+  @media (min-width: $md) {
+    display: inline-block;
+    color: $white;
+  }
+}
+
+.btn-search img {
+  display: block;
+  @media (min-width: $md) {
+    display: none;
+  }
+}

@@ -36,10 +36,29 @@ body {
   }
 }
 
-
+.main-form {
+  display: grid;
+  grid-template-columns: 2fr 1fr 48px;
+  background-color: $primary;
+  padding-inline: 2.4rem 1.6rem;
+  padding-top: 1.6rem;
+  padding-bottom: 1.6rem;
+  border-radius: 6px;
+  @media (min-width: $md) {
+    grid-template-columns: 2fr 1fr 80px;
+  }
+  @media (min-width: $lg) {
+    grid-template-columns: 2fr 1fr 128px;
+  }
+}
 
 // Cards grid
 .cards-grid {
   margin-top: 6rem;
   margin-bottom: 6.2rem;
+}
+
+.cards-container {
+  display: flex;
+  flex-direction: column;
 }
