@@ -1,3 +1,22 @@
+.main-form {
+  display: block;
+  background-color: $primary;
+  padding-inline: 2.4rem 1.6rem;
+  padding-top: 1.6rem;
+  padding-bottom: 1.6rem;
+  border-radius: 6px;
+  @media (min-width: $md) {
+    display: flex;
+  }
+}
+
+div.form-group {
+  display: grid;
+  grid-template-columns: 1fr 80px;
+  gap: 1rem;
+  align-items: center;
+}
+
 .btn-search span {
   display: none;
   @media (min-width: $md) {
@@ -6,9 +25,36 @@
   }
 }
 
-.btn-search img {
+.btn-search svg {
   display: block;
   @media (min-width: $md) {
     display: none;
+  }
+}
+
+.form-group-title {
+  order: -1;
+}
+
+.filter {
+  grid-area: 1 / 2 / 2 / 3;
+  max-height: 2.8rem;
+  max-width: 2.8rem;
+  width: 100%;
+  display: flex;
+}
+
+.btn-search > svg:nth-child(2) > path:nth-child(1) {
+  fill: $white;
+}
+
+.icon-color {
+  fill: $icon;
+}
+
+.form-group-modal[hidden] {
+  display: none;
+  @media (min-width: $md) {
+    display: inherit;
   }
 }

@@ -1,3 +1,14 @@
-.icon-color {
-  fill: $icon;
+input[type="text"] {
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  color: $secondary;
+  background: transparent;
+  &:focus {
+    outline: none;
+  }
+}
+
+input[placeholder] {
+  opacity: .5;
 }
