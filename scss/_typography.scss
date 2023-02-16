@@ -21,7 +21,9 @@
 h1,
 h2,
 h3,
-h4 {
+h4,
+h5,
+.h4-like {
   color: $secondary;
 }
 
@@ -42,7 +44,13 @@ h3,
   text-transform: capitalize;
 }
 
-h4 {
+h4,
+.h4-like {
+  font-size: 1.6rem;
+  line-height: 1.7rem;
+}
+
+h5 {
   font-size: 1.4rem;
   line-height: 1.7rem;
 }

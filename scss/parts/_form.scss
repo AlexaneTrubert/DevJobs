@@ -7,6 +7,8 @@
   border-radius: 6px;
   @media (min-width: $md) {
     display: flex;
+    align-content: center;
+    max-height: 8rem;
   }
 }
 
@@ -15,6 +17,9 @@ div.form-group {
   grid-template-columns: 1fr 80px;
   gap: 1rem;
   align-items: center;
+  @media (min-width: $md) {
+    border-right: 1px solid rgb($light-violet, .2);
+  }
 }
 
 .btn-search span {
@@ -34,6 +39,9 @@ div.form-group {
 
 .form-group-title {
   order: -1;
+  @media (min-width: $md) {
+    display: flex;
+  }
 }
 
 .filter {
@@ -55,6 +63,47 @@ div.form-group {
 .form-group-modal[hidden] {
   display: none;
   @media (min-width: $md) {
-    display: inherit;
+    display: grid;
+    grid-template-columns: 3fr 2fr 1fr;
+  }
+}
+
+.form-group-location {
+  @media (min-width: $md) {
+    grid-area: 1 / 1 / 2 / 2;
+    align-self: center;
+    display: flex;
+  }
+}
+
+.form-group-time {
+  @media (min-width: $md) {
+    align-self: center;
+    grid-area: 1 / 2 / 2 / 3;
+  }
+}
+
+.icon-form {
+  max-height: 2.4rem;
+  margin-right: 1.6rem;
+}
+
+.btn-search {
+  @media (min-width: $md) {
+    grid-area: 1 / 3 / 2 / 4;
+  }
+}
+
+.btn-mobile {
+  @media (min-width: $md) {
+    display: none;
+  }
+}
+
+.desktop {
+  display: none;
+  @media (min-width: $lg) {
+    display: inline;
+    color: $secondary;
   }
 }
