@@ -39,6 +39,7 @@ div.form-group {
 
 .form-group-title {
   order: -1;
+  display: flex;
   @media (min-width: $md) {
     display: flex;
   }
@@ -84,8 +85,12 @@ div.form-group {
 }
 
 .icon-form {
-  max-height: 2.4rem;
-  margin-right: 1.6rem;
+  display: none;
+  @media (min-width: $md) {
+    display: inline-block;
+    max-height: 2.4rem;
+    margin-right: 1.6rem;
+  }
 }
 
 .btn-search {
