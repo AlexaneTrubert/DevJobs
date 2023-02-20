@@ -12,3 +12,7 @@ input[type="text"] {
 input[placeholder] {
   opacity: .5;
 }
+
+.filter-title input::-webkit-input-placeholder::before {
+  content: "blah";
+}

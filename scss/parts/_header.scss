@@ -9,8 +9,17 @@
 }
 
 .toggle-icons {
-  height: 24px;
+  align-self: center;
 }
+
+.sun-toggle {
+  height: 1.9rem;
+}
+
+.moon-toggle {
+  height: 1.2rem;
+}
+
 .switch {
   display: inline-block;
   position: relative;
@@ -19,6 +28,7 @@
   cursor: pointer;
   overflow: hidden;
   margin-inline: 1.6rem;
+  align-self: center;
 }
 
 .switch input {
@@ -59,6 +69,10 @@
 
 .switch input:checked + span:before {
   left: 24px;
+}
+
+.switch span:hover:before {
+  background: $light-violet;
 }
 
 
