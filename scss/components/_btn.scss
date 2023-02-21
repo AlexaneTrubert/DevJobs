@@ -27,13 +27,14 @@
     max-width: 48px;
     width: 100%;
     height: 100%;
-    grid-area: 1 / 2 / 2 / 3;
-    justify-self: end;
     @media (min-width: $md) {
       max-height: inherit;
       max-width: inherit;
       height: fit-content;
       width: fit-content;
+    }
+    @media (min-width: $lg) {
+      padding: 1.3rem 3.5rem;
     }
   }
 }

@@ -22,19 +22,17 @@ body {
   }
 }
 
-// header
+// gestion de l'image en fonction de la taille de l'écran (3 images différentes)
 .main-header {
-  background-image: url('../assets/bg-pattern-header.svg');
+  background-image: url('../assets/mobile/bg-pattern-header.svg');
   background-repeat: no-repeat;
-  background-position: center;
   background-size: cover;
-  min-height: 13.6rem;
-  padding-top: 3.2rem;
+  background-position-y: bottom;
   @media (min-width: $md) {
-    background-position: initial;
+    background-image: url('../assets/tablet/bg-pattern-header.svg');
   }
   @media (min-width: $lg) {
-    background-position: bottom;
+    background-image: url('../assets/desktop/bg-pattern-header.svg');
   }
 }
 

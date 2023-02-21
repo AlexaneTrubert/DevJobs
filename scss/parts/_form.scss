@@ -11,19 +11,24 @@
     max-height: 8rem;
   }
   @media (min-width: $lg) {
-    display: grid;
-    grid-template-columns: 420px auto;
-    gap: 2rem;
+    display: flex;
+    justify-content: space-between;
   }
 }
 
 div.form-group {
-  display: grid;
-  grid-template-columns: 1fr 80px;
-  gap: 1rem;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
   @media (min-width: $md) {
     border-right: 1px solid rgb($light-violet, .2);
+    margin-right: 2.4rem;
+    width: 30%;
+    min-height: 8rem;
+    align-self: center;
+  }
+  @media (min-width: $lg) {
+    width: 50%;
   }
 }
 
@@ -69,23 +74,28 @@ div.form-group {
 .form-group-modal[hidden] {
   display: none;
   @media (min-width: $md) {
-    display: grid;
-    grid-template-columns: 3fr 2fr 1fr;
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
   }
 }
 
 .form-group-location {
   @media (min-width: $md) {
-    grid-area: 1 / 1 / 2 / 2;
-    align-self: center;
+    border-right: 1px solid rgb($light-violet, .2);
     display: flex;
+    align-self: center;
+    height: 8rem;
+  }
+  @media (min-width: $lg) {
+    width: 45%;
   }
 }
 
-.form-group-time {
+/*.form-group-time {
   @media (min-width: $md) {
     align-self: center;
-    grid-area: 1 / 2 / 2 / 3;
+    display: flex;
   }
   @media (min-width: $lg) {
     border-left: 1px solid rgb($light-violet, .2);
@@ -95,8 +105,7 @@ div.form-group {
     align-items: center;
     padding-left: 3rem;
   }
-}
-
+}*/
 
 .icon-form {
   display: none;
@@ -104,14 +113,6 @@ div.form-group {
     display: inline-block;
     max-height: 2.4rem;
     margin-right: 1.6rem;
-  }
-}
-
-.btn-search {
-  @media (min-width: $md) {
-    grid-area: 1 / 3 / 2 / 4;
-  }
-  @media (min-width: $lg) {
     align-self: center;
   }
 }
