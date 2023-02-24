@@ -1,0 +1,9 @@
+.overlay {
+  background-color: var(--background);
+  &:before {
+    content: "";
+    height: 150px;
+    width: 150px;
+    background-color: white;
+  }
+}

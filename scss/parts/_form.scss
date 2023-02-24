@@ -53,6 +53,9 @@ div.form-group {
   @media (min-width: $md) {
     display: flex;
   }
+  @media (min-width: $lg) {
+    width: 100%;
+  }
 }
 
 .filter {
@@ -114,6 +117,9 @@ div.form-group {
     max-height: 2.4rem;
     margin-right: 1.6rem;
     align-self: center;
+  }
+  @media (min-width: $lg) {
+    margin-right: 0;
   }
 }
 
