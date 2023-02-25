@@ -28,6 +28,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position-y: bottom;
+  position: relative;
   @media (min-width: $md) {
     background-image: url('../assets/tablet/bg-pattern-header.svg');
   }
@@ -44,6 +45,14 @@ body {
 // Cards grid
 .cards-grid {
   margin-bottom: 6.2rem;
+  position: relative;
+  z-index: -50;
+  @media (min-width: $md) {
+    margin-top: 4.5rem;
+  }
+  @media (min-width: $lg) {
+    margin-top: 6rem;
+  }
 }
 
 .cards-container {

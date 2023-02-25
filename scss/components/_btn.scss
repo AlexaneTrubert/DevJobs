@@ -37,4 +37,11 @@
       padding: 1.3rem 3.5rem;
     }
   }
+  &-modal {
+    @media (max-width: $sm) {
+      justify-self: center;
+      max-width: 87%;
+      max-height: none;
+    }
+  }
 }
