@@ -44,4 +44,12 @@
       max-height: none;
     }
   }
+  &-footer {
+    min-width: 100%;
+    align-self: center;
+    @media (min-width: $md) {
+      min-width: 4.8rem;
+      justify-self: end;
+    }
+  }
 }

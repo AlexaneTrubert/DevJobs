@@ -1,0 +1,52 @@
+.item-container {
+  position: relative;
+}
+
+.item-content {
+  background-color: $primary;
+  padding-inline: 2.5rem;
+  border-radius: 6px;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  position: relative;
+  &-header {
+    padding-top: 5rem;
+    padding-bottom: 3.2rem;
+    top: -20px;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    gap: 1.3rem;
+  }
+  &-footer {
+    margin-bottom: 0;
+    padding: 2.4rem;
+    display: grid;
+    margin-top: 6.4rem;
+    @media (min-width: $md) {
+      grid-template-columns: repeat(2, 1fr);
+      align-content: center;
+    }
+    @media (min-width: $lg) {
+      max-width: 108rem;
+      margin-inline: auto;
+      padding-inline: 2.5rem;
+    }
+  }
+}
+
+.logo-card-item {
+  justify-self: center;
+}
+
+.item-content-header>p {
+  margin-bottom: 1.4rem;
+}
+
+.job {
+  display: none;
+  @media (min-width: $md) {
+    display: block;
+  }
+}
