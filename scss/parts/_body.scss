@@ -9,6 +9,10 @@
   padding-top: 4rem;
   padding-bottom: 4rem;
   position: relative;
+  @media (min-width: $lg) {
+    padding-inline: 4.8rem;
+  }
+
   &-header {
     padding-top: 5rem;
     padding-bottom: 3.2rem;
@@ -17,30 +21,44 @@
     justify-content: center;
     align-content: center;
     text-align: center;
-    gap: 1.3rem;
+    @media(min-width: $md) {
+      padding-top: 0;
+      padding-bottom: 0;
+      grid-template-columns: 140px 1fr;
+      padding-inline: 0;
+      gap: 4rem;
+    }
   }
-  &-footer {
-    margin-bottom: 0;
-    padding: 2.4rem;
+
+  &-info {
     display: grid;
-    margin-top: 6.4rem;
-    @media (min-width: $md) {
-      grid-template-columns: repeat(2, 1fr);
+    gap: 1.3rem;
+    @media(min-width: $md) {
+      gap: 0;
       align-content: center;
     }
-    @media (min-width: $lg) {
-      max-width: 108rem;
-      margin-inline: auto;
-      padding-inline: 2.5rem;
+  }
+
+  &-info-txt {
+    @media(min-width: $md) {
+      justify-self: start;
     }
   }
 }
 
 .logo-card-item {
   justify-self: center;
+  @media(min-width: $md) {
+    border-radius: 0;
+    border-bottom-left-radius: 6px;
+    width: 140px;
+    height: 140px;
+    position: initial;
+    grid-area: 1 / 1;
+  }
 }
 
-.item-content-header>p {
+.item-content-header > p {
   margin-bottom: 1.4rem;
 }
 
@@ -49,4 +67,26 @@
   @media (min-width: $md) {
     display: block;
   }
+}
+
+// Item body header
+.item-body-header {
+  color: $ter;
+  display: grid;
+  @media (min-width: $md) {
+    grid-template-columns: 2fr 1fr;
+    margin-bottom: 4rem;
+  }
+}
+
+.item-body-info {
+  @media (min-width: $md) {
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+  }
+}
+
+.meta-item {
+  margin-bottom: .8rem;
 }

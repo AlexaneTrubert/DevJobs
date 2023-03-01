@@ -2,11 +2,12 @@
   width: 100%;
   padding: 0 24px;
   @media only screen and (min-width: $md) {
-    padding: 0 40px;
+    padding-inline: 1rem;
   }
   @media only screen and (min-width: $lg) {
     max-width: 116rem;
     margin: 0 auto;
+    padding-inline: 2.5rem;
   }
 }
 
