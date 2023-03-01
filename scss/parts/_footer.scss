@@ -1,0 +1,17 @@
+footer {
+  background: $primary;
+  margin-bottom: 0;
+  padding: 2.4rem 4rem;
+  margin-top: 6.4rem;
+}
+
+.footer-container {
+  display: grid;
+  @media (min-width: $md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (min-width: $lg) {
+    margin-inline: auto;
+    padding-inline: 4rem;
+  }
+}

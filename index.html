@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -16,133 +16,192 @@
 </ul>
 
 <header class="main-header">
-    <div class="container">
-        <div class="logo">
-            <a href="index.html"><img src="assets/logo.svg" alt="" class="logo-img"></a>
-        </div>
-        <div class="switch">
-            <label class="toggle">
-                <input type="checkbox">
-                <span></span>
-            </label>
-        </div>
+    <div class="container header-container">
+        <nav class="main-nav">
+            <div class="logo">
+                <a href="index.html"><img src="assets/desktop/logo.svg" alt="" class="logo-img"></a>
+            </div>
+            <div class="toggle">
+                <img src="assets/desktop/icon-sun.svg" class="toggle-icons sun-toggle">
+                <label class="switch">
+                    <input type="checkbox" id="checkbox">
+                    <span></span>
+                </label>
+                <img src="assets/desktop/icon-moon.svg" class="toggle-icons moon-toggle">
+            </div>
+        </nav>
     </div>
 </header>
 
 <main class="main-content" id="main-content">
-    <h1 class="screen-reader-text">Devjobs</h1>
+    <div class="overlay"></div>
+    <!--    <h1 class="screen-reader-text">Devjobs</h1>-->
     <section class="search-form">
         <div class="container search-container">
-            <form action="">
-                <label for="search">Search</label>
-                <input type="text" name="search" id="search" placeholder="Filter by title..." required>
+            <form action="#" class="main-form">
+                <div class="form-group">
+                    <button type="button" class="filter btn-mobile" aria-expanded="false" aria-controls="filter"
+                            aria-label="Open filter">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                            <path class="icon-color"
+                                  d="M19.108 0H.86a.86.86 0 0 0-.764.455.833.833 0 0 0 .068.884l6.685 9.202.007.01c.242.32.374.708.375 1.107v7.502a.825.825 0 0 0 .248.594.865.865 0 0 0 .942.18l3.756-1.4c.337-.1.56-.41.56-.784v-6.092c0-.399.132-.787.375-1.108l.007-.009 6.685-9.202c.19-.26.217-.6.068-.884A.86.86 0 0 0 19.108 0z"/>
+                        </svg>
+                    </button>
 
-                <label for="location">Location</label>
-                <input type="text" name="location" id="location" placeholder="Filter by location...">
+                    <div class="form-group-title">
+                        <label for="search" class="screen-reader-text">Search</label>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon icon-form-search">
+                            <path fill="#5964E0"
+                                  d="M17.112 15.059h-1.088l-.377-.377a8.814 8.814 0 0 0 2.15-5.784A8.898 8.898 0 0 0 8.898 0 8.898 8.898 0 0 0 0 8.898a8.898 8.898 0 0 0 8.898 8.899c2.211 0 4.23-.808 5.784-2.143l.377.377v1.081l6.845 6.832 2.04-2.04-6.832-6.845zm-8.214 0A6.16 6.16 0 1 1 8.9 2.737a6.16 6.16 0 0 1 0 12.322z"/>
+                        </svg>
+                        <input type="text" name="search" id="search" class="filter-title"
+                               placeholder="Filter by title...">
+                    </div>
 
-                <label for="time">Full time</label>
-                <input type="checkbox" name="time" id="time" placeholder="">
+                    <button type="submit" value="search" class="btn btn-primary btn-search btn-mobile">
+                        <span>Search</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path fill="#5964E0"
+                                  d="M17.112 15.059h-1.088l-.377-.377a8.814 8.814 0 0 0 2.15-5.784A8.898 8.898 0 0 0 8.898 0 8.898 8.898 0 0 0 0 8.898a8.898 8.898 0 0 0 8.898 8.899c2.211 0 4.23-.808 5.784-2.143l.377.377v1.081l6.845 6.832 2.04-2.04-6.832-6.845zm-8.214 0A6.16 6.16 0 1 1 8.9 2.737a6.16 6.16 0 0 1 0 12.322z"/>
+                        </svg>
+                    </button>
+                </div>
 
-                <a href="#" class="btn"><img src="assets/icons/icon-filter.svg" alt="" width="25px"></a>
-                <button type="submit">Rechercher</button>
+                <div class="form-group-modal" id="filter" hidden>
+                    <div class="form-group-location">
+                        <label for="location" class="screen-reader-text">Location</label>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 24" class="icon icon-form-location">
+                            <path fill="#5964E0"
+                                  d="M14.358 2.451A8.3 8.3 0 0 0 8.448 0a8.3 8.3 0 0 0-5.911 2.451c-2.922 2.925-3.285 8.427-.786 11.76l6.697 9.683 6.687-9.669c2.508-3.347 2.145-8.85-.777-11.774zm-5.833 8.894a3.057 3.057 0 0 1-3.051-3.054 3.057 3.057 0 0 1 3.05-3.055 3.057 3.057 0 0 1 3.052 3.055 3.057 3.057 0 0 1-3.051 3.054z"/>
+                        </svg>
+                        <input type="text" name="location" id="location" class="filter-location"
+                               placeholder="Filter by location...">
+                    </div>
+
+                    <div class="form-group-time">
+                        <input type="checkbox" name="time" id="time">
+                        <span class="check"></span>
+                        <label for="time" class="h4-like">
+                            Full time <span class="desktop">only</span>
+                        </label>
+                    </div>
+
+                    <button type="submit" value="search" class="btn btn-primary btn-search btn-modal">
+                        <span>Search</span>
+                    </button>
+                </div>
             </form>
         </div>
     </section>
 
     <section class="cards-grid">
-        <div class="container">
-            <ul class="cards-list">
+        <div class="container cards-container">
+            <ul class="cards-list grid card-sm card-md card-lg">
                 <li class="card-item">
                     <a href="item.html" alt=""><h2 class="h3-like card-title">Senior software Engineer</h2></a>
-                    <img src="assets/images/scoot.svg" alt="Logo de l'entreprise de Scoot" style="background-color: #E99210">
-                    <span class="meta">5h ago</span> &middot; <span class="category">Full Time</span>
+                    <img src="assets/images/scoot.svg" alt="Logo de l'entreprise de Scoot"
+                         style="background-color: #E99210" class="logo-item logo-item-cards">
+                    <span class="meta">5h ago &bull; Full Time</span>
                     <p>Scoot</p>
                     <a href="#" class="card-link_location">United Kingdom</a>
                 </li>
                 <li class="card-item">
                     <a href="item.html" alt=""><h2 class="h3-like card-title">Haskell and PureScript Dev</h2></a>
-                    <img src="assets/images/blogr.svg" alt="Logo de l'entreprise de Scoot" style="background-color: #E54D25">
-                    <span class="meta">20h ago</span> &middot; <span class="category">Part Time</span>
+                    <img src="assets/images/blogr.svg" alt="Logo de l'entreprise de Scoot"
+                         style="background-color: #E54D25" class="logo-item">
+                    <span class="meta">20h ago &bull; Part Time</span>
                     <p>Blogr</p>
                     <a href="#" class="card-link_location">United States</a>
                 </li>
                 <li class="card-item">
                     <a href="item.html" alt=""><h2 class="h3-like card-title">Midlevel Back End Engineer</h2></a>
-                    <img src="assets/images/vector.svg" alt="Logo de l'entreprise de Scoot" style="background-color: #34353F">
-                    <span class="meta">1d ago</span> &middot; <span class="category">Part Time</span>
+                    <img src="assets/images/vector.svg" alt="Logo de l'entreprise de Scoot"
+                         style="background-color: #34353F" class="logo-item">
+                    <span class="meta">1d ago &bull; Part Time</span>
                     <p>Vector</p>
                     <a href="#" class="card-link_location">Russia</a>
                 </li>
                 <li class="card-item">
                     <a href="item.html" alt=""><h2 class="h3-like card-title">Senior Application Engineer</h2></a>
-                    <img src="assets/images/officelite.svg" alt="Logo de l'entreprise de Scoot" style="background-color: #2F4FC7">
-                    <span class="meta">2d ago</span> &middot; <span class="category">Full Time</span>
+                    <img src="assets/images/officelite.svg" alt="Logo de l'entreprise de Scoot"
+                         style="background-color: #2F4FC7" class="logo-item">
+                    <span class="meta">2d ago &bull; Full Time</span>
                     <p>Office Lite</p>
                     <a href="#" class="card-link_location">Japan</a>
                 </li>
                 <li class="card-item">
                     <a href="item.html" alt=""><h2 class="h3-like card-title">Remote DevOps Engineer</h2></a>
-                    <img src="assets/images/pod.svg" alt="Logo de l'entreprise de Scoot" style="background-color: #132034">
-                    <span class="meta">2d ago</span> &middot; <span class="category">Part Time</span>
+                    <img src="assets/images/pod.svg" alt="Logo de l'entreprise de Scoot"
+                         style="background-color: #132034" class="logo-item">
+                    <span class="meta">2d ago &bull; Part Time</span>
                     <p>Pod</p>
                     <a href="#" class="card-link_location">Thailand</a>
                 </li>
                 <li class="card-item">
                     <a href="item.html" alt=""><h2 class="h3-like card-title">Desktop Support Manager</h2></a>
-                    <img src="assets/images/creative.svg" alt="Logo de l'entreprise de Scoot" style="background-color: #4E1853">
-                    <span class="meta">4d ago</span> &middot; <span class="category">Part Time</span>
+                    <img src="assets/images/creative.svg" alt="Logo de l'entreprise de Scoot"
+                         style="background-color: #4E1853" class="logo-item">
+                    <span class="meta">4d ago &bull; Part Time</span>
                     <p>Creative</p>
                     <a href="#" class="card-link_location">Germany</a>
                 </li>
                 <li class="card-item">
                     <a href="item.html" alt=""><h2 class="h3-like card-title">iOS Engineer</h2></a>
-                    <img src="assets/images/pomodoro.svg" alt="Logo de l'entreprise de Scoot" style="background-color: #4722C6">
-                    <span class="meta">1w ago</span> &middot; <span class="category">Full Time</span>
+                    <img src="assets/images/pomodoro.svg" alt="Logo de l'entreprise de Scoot"
+                         style="background-color: #4722C6" class="logo-item">
+                    <span class="meta">1w ago &bull; Full Time</span>
                     <p>Pomodro</p>
                     <a href="#" class="card-link_location">Germany</a>
                 </li>
                 <li class="card-item">
                     <a href="item.html" alt=""><h2 class="h3-like card-title">Senior EJB Developer</h2></a>
-                    <img src="assets/images/maker.svg" alt="Logo de l'entreprise de Scoot" style="background-color: #21427D">
-                    <span class="meta">1w ago</span> &middot; <span class="category">Full Time</span>
+                    <img src="assets/images/maker.svg" alt="Logo de l'entreprise de Scoot"
+                         style="background-color: #21427D" class="logo-item">
+                    <span class="meta">1w ago &bull; Full Time</span>
                     <p>Maker</p>
                     <a href="#" class="card-link_location">United Kingdom</a>
                 </li>
                 <li class="card-item">
                     <a href="item.html" alt=""><h2 class="h3-like card-title">Senior Frontend Developer</h2></a>
-                    <img src="assets/images/coffeeroasters.svg" alt="Logo de l'entreprise de Scoot" style="background-color: #F2DECB">
-                    <span class="meta">1w ago</span> &middot; <span class="category">Part Time</span>
+                    <img src="assets/images/coffeeroasters.svg" alt="Logo de l'entreprise de Scoot"
+                         style="background-color: #F2DECB" class="logo-item">
+                    <span class="meta">1w ago &bull; Part Time</span>
                     <p>Coffeeroasters</p>
                     <a href="#" class="card-link_location">Singapore</a>
                 </li>
                 <li class="card-item">
                     <a href="item.html" alt=""><h2 class="h3-like card-title">App & Website Designer</h2></a>
-                    <img src="assets/images/mastercraft.svg" alt="Logo de l'entreprise de Scoot" style="background-color: #1F1F1F">
-                    <span class="meta">2w ago</span> &middot; <span class="category">Freelance</span>
+                    <img src="assets/images/mastercraft.svg" alt="Logo de l'entreprise de Scoot"
+                         style="background-color: #1F1F1F" class="logo-item">
+                    <span class="meta">2w ago &bull; Freelance</span>
                     <p>Mastercraft</p>
                     <a href="#" class="card-link_location">United States</a>
                 </li>
                 <li class="card-item">
                     <a href="item.html" alt=""><h2 class="h3-like card-title">Fullstack Developer</h2></a>
-                    <img src="assets/images/crowdfund.svg" alt="Logo de l'entreprise de Scoot" style="background-color: #37C790">
-                    <span class="meta">1mo ago</span> &middot; <span class="category">Part Time</span>
+                    <img src="assets/images/crowdfund.svg" alt="Logo de l'entreprise de Scoot"
+                         style="background-color: #37C790" class="logo-item">
+                    <span class="meta">1mo ago &bull; Part Time</span>
                     <p>Crowdfund</p>
                     <a href="#" class="card-link_location">New Zealand</a>
                 </li>
                 <li class="card-item">
                     <a href="item.html" alt=""><h2 class="h3-like card-title">Technical Lead Engineer</h2></a>
-                    <img src="assets/images/typemaster.svg" alt="Logo de l'entreprise de Scoot" style="background-color: #F16718">
-                    <span class="meta">1mo ago</span> &middot; <span class="category">Part Time</span>
+                    <img src="assets/images/typemaster.svg" alt="Logo de l'entreprise de Scoot"
+                         style="background-color: #F16718" class="logo-item">
+                    <span class="meta">1mo ago &bull; Part Time</span>
                     <p>Typemaster</p>
                     <a href="#" class="card-link_location">United Kingdom</a>
                 </li>
             </ul>
 
-            <!-- Ajout du bouton pour charger d'autres éléments -->è
-            <button type="button">Load More</button>
+            <!-- Ajout du bouton pour charger d'autres éléments -->
+            <button type="button" class="btn btn-primary btn-load">Load More</button>
         </div>
     </section>
 
 </main>
+
+<script src="js/app.js"></script>
 </body>
 </html>
