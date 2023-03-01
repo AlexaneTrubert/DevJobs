@@ -1,0 +1,17 @@
+@mixin card-sm {
+  @media screen and (min-width: 36em) {
+    @content;
+  }
+}
+
+@mixin card-md {
+  @media screen and (min-width: 48em) {
+    @content;
+  }
+}
+
+@mixin card-lg {
+  @media screen and (min-width: 62em) {
+    @content;
+  }
+}

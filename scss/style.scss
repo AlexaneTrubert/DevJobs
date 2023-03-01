@@ -4,11 +4,39 @@
 @import 'helpers';
 @import 'typography';
 @import 'layout';
+@import 'components/nav';
+@import 'components/modal';
 @import 'components/alerts';
 @import 'components/btn';
+@import 'components/icons';
 @import 'components/card';
-@import 'components/fields';
+@import 'components/forms';
+@import 'components/switch';
+@import 'components/checkbox';
+@import 'components/overlay';
 @import 'parts/body';
 @import 'parts/footer';
 @import 'parts/form';
 @import 'parts/header';
+
+.grid {
+  display: grid;
+  gap: 2.4rem;
+  @include card-sm {
+    grid-template-columns: 1fr;
+  }
+  @include card-md {
+    grid-template-columns: repeat(2,1fr);
+    row-gap: 4rem;
+    column-gap: 1rem;
+  }
+  @include card-lg {
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 3rem;
+  }
+}
+
+button {
+  border: none;
+  background: transparent;
+}

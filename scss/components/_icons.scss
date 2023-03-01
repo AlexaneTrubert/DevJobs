@@ -1,0 +1,28 @@
+.icon {
+  display: inline-block;
+  max-height: 2.4rem;
+  align-self: center;
+  &-color {
+    fill: $icon;
+  }
+  &-form-search {
+    display: none;
+    @media (min-width: $md) {
+      display: inline-block;
+      max-height: 2.4rem;
+      margin-right: 1.6rem;
+    }
+    @media (min-width: $lg) {
+      margin-right: 0;
+    }
+  }
+  &-form-location {
+    @media (min-width: $md) {
+      max-height: 2.4rem;
+      margin-right: 1.6rem;
+    }
+    @media (min-width: $lg) {
+      margin-right: 0;
+    }
+  }
+}

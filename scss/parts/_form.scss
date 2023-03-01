@@ -1,0 +1,90 @@
+.main-form {
+  display: block;
+  background-color: $primary;
+  padding-inline: 2.4rem 1.6rem;
+  padding-top: 1.6rem;
+  padding-bottom: 1.6rem;
+  border-radius: 6px;
+  @media (min-width: $md) {
+    display: flex;
+    align-content: center;
+    max-height: 8rem;
+  }
+  @media (min-width: $lg) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+div.form-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @media (min-width: $md) {
+    border-right: 1px solid rgb($light-violet, .2);
+    margin-right: 2.4rem;
+    width: 30%;
+    min-height: 8rem;
+    align-self: center;
+  }
+  @media (min-width: $lg) {
+    width: 50%;
+  }
+}
+
+.btn-search span {
+  display: none;
+  @media (min-width: $md) {
+    display: inline-block;
+    color: $white;
+  }
+}
+
+.btn-search svg {
+  display: block;
+  @media (min-width: $md) {
+    display: none;
+  }
+}
+
+.form-group-title {
+  order: -1;
+  display: flex;
+  @media (min-width: $md) {
+    display: flex;
+  }
+  @media (min-width: $lg) {
+    width: 100%;
+  }
+}
+
+.filter {
+  grid-area: 1 / 2 / 2 / 3;
+  max-height: 2.8rem;
+  max-width: 2.8rem;
+  width: 100%;
+  display: flex;
+}
+
+.btn-search > svg:nth-child(2) > path:nth-child(1) {
+  fill: $white;
+}
+
+
+.btn-mobile {
+  @media (min-width: $md) {
+    display: none;
+  }
+}
+
+.desktop {
+  display: none;
+  @media (min-width: $lg) {
+    display: inline;
+    color: $secondary;
+  }
+  @media (max-width: $sm) {
+    display: inline;
+    color:$secondary;
+  }
+}

@@ -1,0 +1,19 @@
+input {
+  width: 100%;
+  border: none;
+  outline: none;
+  @media (min-width: $lg) {
+    margin-left: 1.6rem;
+  }
+}
+
+input[type="text"] {
+  border: none;
+  cursor: pointer;
+  color: $secondary;
+  background: transparent;
+}
+
+input[placeholder] {
+  opacity: .5;
+}
