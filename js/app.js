@@ -1,6 +1,9 @@
 const inputFormTitle = document.querySelector(".filter-title");
-const toggle = document.querySelector("#checkbox");
-const html = document.querySelector("html");
+const loadMoreBtn = document.querySelector(".btn-load");
+
+// Ouverture modale au clic sur le bouton filtre
+const btnFilter = document.querySelector(".filter");
+const modal = document.querySelector(".form-group-modal");
 
 //modification du placeholder en fonction de la taille de l'écran
 function placeholder() {
@@ -11,19 +14,6 @@ function placeholder() {
     }
 }
 
-// switch light / dark mode au clic sur le toggle
-function switchMode() {
-    if (toggle.checked === true) {
-        html.className = "dark"
-    } else {
-        html.className = "light";
-    }
-}
-
-// Ouverture modale au clic sur le bouton filtre
-const btnFilter = document.querySelector(".filter");
-const modal = document.querySelector(".form-group-modal");
-
 btnFilter.addEventListener("click", function() {
     const open = JSON.parse(btnFilter.getAttribute('aria-expanded'));
     btnFilter.setAttribute('aria-expanded', !open);
@@ -32,4 +22,23 @@ btnFilter.addEventListener("click", function() {
 
 placeholder();
 window.addEventListener("resize", placeholder);
-toggle.addEventListener("click", switchMode);
+
+let offsetJob = 0;
+function getMoreJobs() {
+    getAllJobs(
+        offsetJob,
+        function(data) {
+            offsetJob += 12;
+            data.jobs.forEach(jobs => {
+                addJobs(jobs.company, jobs.contract, jobs.id, jobs.location, jobs.logo, jobs.logoBackground, jobs.position, jobs.postedAt);
+            });
+        },
+        function () {
+            alert("Erreur !");
+        }
+    );
+}
+
+getMoreJobs();
+
+loadMoreBtn.addEventListener("click", getMoreJobs);
