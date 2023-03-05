@@ -18,19 +18,19 @@ toggleSwitchTheme.addEventListener("click", switchMode);
 // si oui on applique son choix
 
 document.addEventListener("DOMContentLoaded", () => {
-    if (!localStorage) {
-        if (localStorage.getItem('theme') === 'dark') {
-            body.className = "dark";
-        } else if (localStorage.getItem('theme') === "light") {
-            body.className = "light";
-        }
-    } else {
+    if (localStorage.length === 0) {
         if (globalThis.matchMedia("(prefers-color-scheme:dark)").matches === true) {
             toggleSwitchTheme.checked = true;
             body.className = "dark"
         } else {
             toggleSwitchTheme.checked = false;
-            body.className == "light";
+            body.className = "light";
+        }
+    } else {
+        if (localStorage.getItem('theme') === 'dark') {
+            body.className = "dark";
+        } else if (localStorage.getItem('theme') === "light") {
+            body.className = "light";
         }
     }
 });
