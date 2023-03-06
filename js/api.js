@@ -1,17 +1,21 @@
-function getAllJobs(offset, onSucess, onError) {
+function getAllJobs(offset, onSucess, onError, loadMoreBtn) {
     const request = new XMLHttpRequest();
     request.open("GET", "https://ecf-dwwm.cefim-formation.org/api/jobs?offset=" + offset);
     request.addEventListener("readystatechange", function () {
         if(request.readyState === XMLHttpRequest.DONE) {
+            loadMoreBtn.disabled = false;
             if(request.status === 200) {
                 const response = JSON.parse(request.responseText);
                 onSucess(response);
+                loadMoreBtn.textContent = "Load More";
             } else {
                 onError();
             }
         }
     });
     request.send();
+    loadMoreBtn.textContent = "Loading...";
+    loadMoreBtn.disabled = true;
 }
 
 function getOneJobs(id, onSucess, onError) {

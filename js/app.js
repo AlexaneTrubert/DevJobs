@@ -35,7 +35,8 @@ function getMoreJobs() {
         },
         function () {
             alert("Erreur !");
-        }
+        },
+        loadMoreBtn
     );
 }
 
