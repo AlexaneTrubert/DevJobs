@@ -40,5 +40,4 @@ function getMoreJobs() {
 }
 
 getMoreJobs();
-
 loadMoreBtn.addEventListener("click", getMoreJobs);
