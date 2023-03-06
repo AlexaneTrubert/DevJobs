@@ -29,8 +29,10 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
         if (localStorage.getItem('theme') === 'dark') {
             body.className = "dark";
+            toggleSwitchTheme.checked = true;
         } else if (localStorage.getItem('theme') === "light") {
             body.className = "light";
+            toggleSwitchTheme.checked = false;
         }
     }
 });
