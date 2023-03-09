@@ -42,6 +42,8 @@ body {
 .search-form {
   width: 100%;
   transform: translateY(-50%);
+  position: relative;
+  z-index: 1;
 }
 
 // Cards grid

@@ -1,5 +1,6 @@
 const inputFormTitle = document.querySelector(".filter-title");
 const loadMoreBtn = document.querySelector(".btn-load");
+const overlay = document.querySelector(".overlay");
 
 // Ouverture modale au clic sur le bouton filtre
 const btnFilter = document.querySelector(".filter");
@@ -18,6 +19,7 @@ btnFilter.addEventListener("click", function() {
     const open = JSON.parse(btnFilter.getAttribute('aria-expanded'));
     btnFilter.setAttribute('aria-expanded', !open);
     modal.hidden = !modal.hidden;
+    overlay.hidden = !overlay.hidden;
 })
 
 placeholder();
