@@ -24,6 +24,12 @@ body {
   }
 }
 
+.item-container {
+  @media (min-width: $lg) {
+    max-width: 730px;
+  }
+}
+
 // gestion de l'image en fonction de la taille de l'écran (3 images différentes)
 .main-header {
   background-image: url('../assets/mobile/bg-pattern-header.svg');

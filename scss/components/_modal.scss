@@ -39,9 +39,10 @@
     display: flex;
     align-self: center;
     height: 8rem;
+    max-width: 20rem;
   }
   @media (min-width: $lg) {
-    width: 45%;
+    max-width: 45%;
   }
 }
 
