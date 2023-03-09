@@ -3,10 +3,7 @@ const loadMoreBtn = document.querySelector(".btn-load");
 const overlay = document.querySelector(".overlay");
 let offsetJob = 0;
 const mainContent = document.querySelector(".cards-list");
-
-// Ouverture modale au clic sur le bouton filtre
 const btnFilter = document.querySelector(".filter");
-const modal = document.querySelector(".form-group-modal");
 
 // Moteur de recherche
 const form = document.querySelector(".main-form");
@@ -24,12 +21,17 @@ function placeholder() {
     }
 }
 
-btnFilter.addEventListener("click", function() {
+// Fonction pour ouvrir ou fermer la modal
+function modalState() {
+    const modal = document.querySelector(".form-group-modal");
     const open = JSON.parse(btnFilter.getAttribute('aria-expanded'));
     btnFilter.setAttribute('aria-expanded', !open);
     modal.hidden = !modal.hidden;
     overlay.hidden = !overlay.hidden;
-})
+}
+
+btnFilter.addEventListener("click", modalState);
+overlay.addEventListener("click", modalState);
 
 placeholder();
 window.addEventListener("resize", placeholder);
@@ -69,6 +71,8 @@ form.addEventListener("submit", function(ev) {
     const text = document.querySelector(".filter-title").value;
     const jobLocation = document.querySelector("#location").value;
     const fulltime = document.querySelector(".checkbox");
+
+    modalState();
 
     getAllJobs(
         0,
