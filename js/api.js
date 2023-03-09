@@ -7,7 +7,14 @@ function getAllJobs(offset, onSucess, onError, loadMoreBtn) {
             if(request.status === 200) {
                 const response = JSON.parse(request.responseText);
                 onSucess(response);
-                loadMoreBtn.textContent = "Load More";
+                if(offsetJob >= response.total) {
+                    loadMoreBtn.textContent = "No more data";
+                    loadMoreBtn.className = "btn btn-load btn-disabled";
+                    loadMoreBtn.disabled = true;
+                }else {
+                    // console.log("not mouh");
+                    loadMoreBtn.textContent = "Load More";
+                }
             } else {
                 onError();
             }

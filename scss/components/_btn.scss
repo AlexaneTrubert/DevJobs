@@ -5,6 +5,11 @@
   border-radius: 5px;
   font-weight: bold;
 
+  &-disabled {
+    color: black;
+    background-color: $light-violet;
+  }
+
   &-primary {
     color: $white;
     background-color: $violet;

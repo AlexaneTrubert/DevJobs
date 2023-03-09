@@ -30,7 +30,7 @@ function getMoreJobs() {
     getAllJobs(
         offsetJob,
         function(data) {
-            offsetJob += 12;
+            offsetJob += data.jobs.length;
             data.jobs.forEach(jobs => {
                 addJobs(jobs.company, jobs.contract, jobs.id, jobs.location, jobs.logo, jobs.logoBackground, jobs.position, jobs.postedAt);
             });
@@ -41,6 +41,5 @@ function getMoreJobs() {
         loadMoreBtn
     );
 }
-
 getMoreJobs();
 loadMoreBtn.addEventListener("click", getMoreJobs);
