@@ -3,7 +3,6 @@ const loadMoreBtn = document.querySelector(".btn-load");
 const overlay = document.querySelector(".overlay");
 let offsetJob = 0;
 const mainContent = document.querySelector(".cards-list");
-const searchBtn = document.querySelector(".btn-modal");
 
 // Ouverture modale au clic sur le bouton filtre
 const btnFilter = document.querySelector(".filter");
@@ -35,6 +34,8 @@ btnFilter.addEventListener("click", function() {
 placeholder();
 window.addEventListener("resize", placeholder);
 
+
+// Affichages de toutes les offres
 function getMoreJobs() {
     getAllJobs(
         offsetJob,
@@ -58,6 +59,8 @@ function getMoreJobs() {
 getMoreJobs();
 loadMoreBtn.addEventListener("click", getMoreJobs);
 
+
+// Formulaire de recherche
 form.addEventListener("submit", function(ev) {
     ev.preventDefault();
     mainContent.innerHTML = "";
@@ -70,6 +73,7 @@ form.addEventListener("submit", function(ev) {
     getAllJobs(
         0,
         function(data) {
+            offsetJob += data.jobs.length;
             data.jobs.forEach(jobs => {
                 addJobs(jobs.company, jobs.contract, jobs.id, jobs.location, jobs.logo, jobs.logoBackground, jobs.position, jobs.postedAt);
             });
