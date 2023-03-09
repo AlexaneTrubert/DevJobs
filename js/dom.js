@@ -2,6 +2,7 @@ function addJobs(company, contract, id, localisation, logo, logoBackground, posi
     const ulCardsJobs = document.querySelector("#cards-job-list");
     const template = document.querySelector("#job-card");
     const clone = template.content.cloneNode(true);
+    const datePost = timestamp(date);
 
 // mon contenu à cloner
     const h2 = clone.querySelector("h2");
@@ -12,7 +13,7 @@ function addJobs(company, contract, id, localisation, logo, logoBackground, posi
     logoCompany.style.backgroundColor = logoBackground;
 
     const meta = clone.querySelector(".meta");
-    meta.textContent = date + " \u2022\ " + contract;
+    meta.textContent = datePost + " \u2022\ " + contract;
 
     const pCompanyName = clone.querySelector("p");
     pCompanyName.textContent = company

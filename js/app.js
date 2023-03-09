@@ -41,7 +41,7 @@ window.addEventListener("resize", placeholder);
 function getMoreJobs() {
     getAllJobs(
         offsetJob,
-        function(data) {
+        function (data) {
             offsetJob += data.jobs.length;
             data.jobs.forEach(jobs => {
                 addJobs(jobs.company, jobs.contract, jobs.id, jobs.location, jobs.logo, jobs.logoBackground, jobs.position, jobs.postedAt);
@@ -63,7 +63,7 @@ loadMoreBtn.addEventListener("click", getMoreJobs);
 
 
 // Formulaire de recherche
-form.addEventListener("submit", function(ev) {
+form.addEventListener("submit", function (ev) {
     ev.preventDefault();
     mainContent.innerHTML = "";
     offsetJob = 0;
@@ -76,13 +76,13 @@ form.addEventListener("submit", function(ev) {
 
     getAllJobs(
         0,
-        function(data) {
+        function (data) {
             offsetJob += data.jobs.length;
             data.jobs.forEach(jobs => {
                 addJobs(jobs.company, jobs.contract, jobs.id, jobs.location, jobs.logo, jobs.logoBackground, jobs.position, jobs.postedAt);
             });
         },
-        function() {
+        function () {
             alert("Erreur !");
         },
         loadMoreBtn,
@@ -92,3 +92,48 @@ form.addEventListener("submit", function(ev) {
         limit
     );
 });
+
+function timestamp(timestamp) {
+    const date = new Date(timestamp);
+    const today = new Date();
+    const seconds = (today.getTime() - date.getTime()) / 1000;
+    let value;
+    let unit;
+
+    let y = Math.floor(seconds / (3600 * 24 * 365));
+    let m = Math.floor(seconds / (3600 * 24 * 30));
+    let w = Math.floor(seconds / (3600 * 24 * 7));
+    let d = Math.floor(seconds / (3600 * 24));
+    let h = Math.floor(seconds / 3600);
+    let mn = Math.floor(seconds / 60);
+    let s = Math.floor(seconds % 60);
+
+    if(y > 2) {
+        value = "A long time";
+        unit = "";
+    }
+    else if (y > 0 && y < 2) {
+        value = y;
+        unit = y > 1 ? "years" : "year";
+    } else if (m > 0) {
+        value = m;
+        unit = "month";
+    } else if (w > 0) {
+        value = w;
+        unit = w > 1 ? "weeks" : "week";
+    } else if (d > 0) {
+        value = d;
+        unit = d > 1 ? "days" : "day";
+    } else if (h > 0) {
+        value = h;
+        unit = h > 1 ? "hours" : "hour";
+    } else if (mn > 0) {
+        value = mn;
+        unit = mn > 1 ? "minutes" : "minute";
+    } else {
+        value = s;
+        unit = s > 1 ? "seconds" : "second";
+    }
+
+    return value + " " + unit + " ago";
+}

@@ -68,3 +68,7 @@
 .switch span:hover:before {
   background: $light-violet;
 }
+
+.switch:focus-within {
+  border: 2px solid red;
+}
