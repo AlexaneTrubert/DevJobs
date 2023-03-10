@@ -70,5 +70,6 @@
 }
 
 .switch:focus-within {
-  border: 2px solid red;
+  border: 2px solid $white;
+  border-radius: 6px;
 }
