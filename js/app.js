@@ -72,8 +72,6 @@ form.addEventListener("submit", function (ev) {
     const jobLocation = document.querySelector("#location").value;
     const fulltime = document.querySelector(".checkbox");
 
-    modalState();
-
     getAllJobs(
         0,
         function (data) {
