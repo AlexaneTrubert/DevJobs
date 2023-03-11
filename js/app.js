@@ -79,6 +79,9 @@ form.addEventListener("submit", function (ev) {
             data.jobs.forEach(jobs => {
                 addJobs(jobs.company, jobs.contract, jobs.id, jobs.location, jobs.logo, jobs.logoBackground, jobs.position, jobs.postedAt);
             });
+            if (window.matchMedia("(max-width: 375px)").matches) {
+                modalState();
+            }
         },
         function () {
             alert("Erreur !");
