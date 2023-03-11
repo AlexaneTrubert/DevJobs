@@ -27,7 +27,7 @@ $xl: 75em;
   }
 }
 
-html.dark {
+body.dark {
   --primary: rgb(25, 32, 45);
   --secondary: rgb(255, 255, 255);
   --ter: rgb(110, 128, 152);
@@ -37,7 +37,7 @@ html.dark {
   --compagny-btn-txt: rgb(255, 255, 255);
 }
 
-html.light {
+body.light {
   --primary: rgb(255, 255, 255);
   --secondary: rgb(25, 32, 45);
   --ter: rgb(157, 174, 194);

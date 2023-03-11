@@ -4,7 +4,7 @@
   "description": "Exercice d'intégration front pour le CEFIM",
   "main": "index.js",
   "scripts": {
-    "sass": "sass scss:css --watch"
+    "sass": "sass scss:css --watch --style=compressed"
   },
   "repository": {
     "type": "git",

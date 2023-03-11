@@ -60,10 +60,11 @@ div.form-group {
 
 .filter {
   grid-area: 1 / 2 / 2 / 3;
-  max-height: 2.8rem;
+  max-height: 2rem;
   max-width: 2.8rem;
   width: 100%;
   display: flex;
+  margin-right: 2rem;
 }
 
 .btn-search > svg:nth-child(2) > path:nth-child(1) {

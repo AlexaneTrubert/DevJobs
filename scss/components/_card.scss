@@ -19,6 +19,7 @@
 
 .logo-item-cards {
   left: 25px;
+  padding: .5rem;
 }
 
 .card-title {
@@ -36,4 +37,8 @@ li>p {
 a.card-link_location {
   color: $violet;
   font-weight: 700;
+}
+
+li:hover {
+  background-color: $compagny_btn;
 }

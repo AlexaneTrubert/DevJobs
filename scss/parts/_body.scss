@@ -48,7 +48,9 @@
 
 .logo-card-item {
   justify-self: center;
+  padding: .5rem;
   @media(min-width: $md) {
+    padding: 6rem 3rem;
     border-radius: 0;
     border-bottom-left-radius: 6px;
     width: 140px;

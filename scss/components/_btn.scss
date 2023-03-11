@@ -4,6 +4,13 @@
   border: none;
   border-radius: 5px;
   font-weight: bold;
+  transition: .3s;
+
+
+  &-disabled {
+    color: black;
+    background-color: $light-violet;
+  }
 
   &-primary {
     color: $white;
@@ -75,12 +82,16 @@
   &-compagny-site {
     @media (min-width: $md) {
       grid-area: 1 / 2;
-      justify-self: center;
+      justify-self: end;
       padding-inline: 2rem;
       padding-bottom: 1.6rem;
       padding-top: 1.6rem;
       color: $compagny-btn-txt;
       background-color: $compagny_btn;
+      margin-right: 4.5rem;
+    }
+    @media(min-width: $lg) {
+      margin-right: 7rem;
     }
   }
 }

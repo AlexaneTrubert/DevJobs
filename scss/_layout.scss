@@ -10,19 +10,23 @@ body {
 .container {
   width: 100%;
   margin-inline: auto;
-  padding-inline: 2.4rem;
   @media (min-width: $sm) {
     max-width: 33rem;
   }
   @media (min-width: $md) {
     max-width: 69rem;
-    padding-inline: 4rem;
   }
   @media (min-width: $lg) {
     max-width: 1110px;
   }
   @media (min-width: $xl) {
-    max-width: 73rem;
+    max-width: 1110px;
+  }
+}
+
+.item-container {
+  @media (min-width: $lg) {
+    max-width: 730px;
   }
 }
 
@@ -44,6 +48,8 @@ body {
 .search-form {
   width: 100%;
   transform: translateY(-50%);
+  position: relative;
+  z-index: 1;
 }
 
 // Cards grid
