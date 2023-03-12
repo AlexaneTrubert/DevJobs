@@ -20,6 +20,19 @@ function addJobs(company, contract, id, localisation, logo, logoBackground, posi
 
     const address = clone.querySelector(".card-link_location");
     address.textContent = localisation;
+    address.addEventListener("click", function () {
+        let offsetJob = 0;
+        getJobsFromCountry(offsetJob, localisation, loadMoreBtn, function (data) {
+            mainContent.innerHTML="";
+                data.jobs.forEach(jobs => {
+                    offsetJob += data.jobs.length;
+                    addJobs(jobs.company, jobs.contract, jobs.id, jobs.location, jobs.logo, jobs.logoBackground, jobs.position, jobs.postedAt);
+                });
+            },
+            function () {
+                alert("Erreur !");
+            })
+    })
 
     const urlDetail = clone.querySelector("#linkToDetail");
     urlDetail.href = "item.html?id=" + id;
