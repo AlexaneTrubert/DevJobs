@@ -1,0 +1,44 @@
+.form-group-time {
+  display: block;
+  position: relative;
+  padding-left: 3.5rem;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  align-self: center;
+
+  // On cache l'input habituel
+  input {
+    position: absolute;
+    cursor: pointer;
+    opacity: 0;
+    height: 0;
+    width: 0;
+  }
+
+  // On créé une checkbox perso
+  .check {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 24px;
+    width: 24px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+  }
+
+  // Modification bg au survol
+  &:hover input ~ .check {
+    background-color: rgba($violet, 0.25);
+  }
+
+  // Modification on checked
+  & input:checked ~ .check {
+    background-color: $violet;
+        background-image: url('../assets/desktop/icon-check.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+  }
+}

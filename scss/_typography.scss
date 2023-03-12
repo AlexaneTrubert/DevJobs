@@ -1,0 +1,117 @@
+/* kumbh-sans-regular - latin */
+@font-face {
+  font-family: 'Kumbh Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+  url('../assets/fonts/kumbh/kumbh-sans-v19-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+  url('../assets/fonts/kumbh/kumbh-sans-v19-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* kumbh-sans-700 - latin */
+@font-face {
+  font-family: 'Kumbh Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local(''),
+  url('../assets/fonts/kumbh/kumbh-sans-v19-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+  url('../assets/fonts/kumbh/kumbh-sans-v19-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+.h4-like {
+  color: $secondary;
+}
+
+h1 {
+  font-size: 2.8rem;
+  line-height: 3.4rem;
+}
+
+h2, {
+  font-size: 2.4rem;
+  line-height: 2.9rem;
+}
+
+h3,
+.h3-like {
+  font-size: 2rem;
+  line-height: 2.4rem;
+  text-transform: capitalize;
+}
+
+.h3-content-subtitle {
+  margin-bottom: 2rem;
+  margin-top: 4rem;
+}
+
+h4,
+.h4-like {
+  font-size: 1.6rem;
+  line-height: 1.7rem;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+h5 {
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+}
+
+p {
+  color: $ter;
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+}
+
+ul, ol {
+  color: $ter;
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+  margin-top: 3.2rem;
+}
+
+ul.requirements-list li:before {
+  content: "\2022";
+  color: $violet;
+  margin-right: 3.2rem;
+}
+
+ol.list {
+  counter-reset: li;
+}
+
+ol.list li::before {
+  content: counter(li);
+  color: $violet;
+  display: inline-block;
+  margin-right: 3.2rem;
+}
+
+li {
+  counter-increment: li;
+}
+
+ul li:first-line, ol li:first-line {
+  text-indent: -32px;
+}
+
+span {
+  color: $ter;
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+}
+
+a {
+  text-decoration: none;
+  color: $violet;
+  font-weight: 700;
+}
+
+a.country-link {
+  font-size: 1.4rem;
+  margin-top: 1.2rem;
+}

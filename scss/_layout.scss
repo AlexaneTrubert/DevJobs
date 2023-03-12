@@ -1,0 +1,82 @@
+body {
+  font-family: kumbh, sans-serif;
+  background-color: $bg;
+}
+
+.skip-to-main-content-link {
+  position: absolute;
+  left: -9999px;
+  z-index: 999;
+  padding: 1em;
+  background-color: black;
+  color: white;
+  opacity: 0;
+}
+.skip-to-main-content-link:focus {
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 1;
+}
+
+
+.container {
+  width: 100%;
+  margin-inline: auto;
+  @media (min-width: $sm) {
+    max-width: 33rem;
+  }
+  @media (min-width: $md) {
+    max-width: 69rem;
+  }
+  @media (min-width: $lg) {
+    max-width: 1110px;
+  }
+  @media (min-width: $xl) {
+    max-width: 1110px;
+  }
+}
+
+.item-container {
+  @media (min-width: $lg) {
+    max-width: 730px;
+  }
+}
+
+// gestion de l'image en fonction de la taille de l'écran (3 images différentes)
+.main-header {
+  background-image: url('../assets/mobile/bg-pattern-header.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: bottom;
+  position: relative;
+  @media (min-width: $md) {
+    background-image: url('../assets/tablet/bg-pattern-header.svg');
+  }
+  @media (min-width: $lg) {
+    background-image: url('../assets/desktop/bg-pattern-header.svg');
+  }
+}
+
+.search-form {
+  width: 100%;
+  transform: translateY(-50%);
+  position: relative;
+  z-index: 1;
+}
+
+// Cards grid
+.cards-grid {
+  margin-bottom: 6.2rem;
+  position: relative;
+  @media (min-width: $md) {
+    margin-top: 4.5rem;
+  }
+  @media (min-width: $lg) {
+    margin-top: 6rem;
+  }
+}
+
+.cards-container {
+  display: flex;
+  flex-direction: column;
+}

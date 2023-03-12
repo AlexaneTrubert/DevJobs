@@ -1,0 +1,94 @@
+.item-container {
+  position: relative;
+}
+
+.item-content {
+  background-color: $primary;
+  padding-inline: 2.5rem;
+  border-radius: 6px;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  position: relative;
+  @media (min-width: $lg) {
+    padding-inline: 4.8rem;
+  }
+
+  &-header {
+    padding-top: 5rem;
+    padding-bottom: 3.2rem;
+    top: -20px;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    @media(min-width: $md) {
+      padding-top: 0;
+      padding-bottom: 0;
+      grid-template-columns: 140px 1fr;
+      padding-inline: 0;
+      gap: 4rem;
+    }
+  }
+
+  &-info {
+    display: grid;
+    gap: 1.3rem;
+    @media(min-width: $md) {
+      gap: 0;
+      align-content: center;
+    }
+  }
+
+  &-info-txt {
+    @media(min-width: $md) {
+      justify-self: start;
+    }
+  }
+}
+
+.logo-card-item {
+  justify-self: center;
+  padding: .5rem;
+  @media(min-width: $md) {
+    padding: 6rem 3rem;
+    border-radius: 0;
+    border-bottom-left-radius: 6px;
+    width: 140px;
+    height: 140px;
+    position: initial;
+    grid-area: 1 / 1;
+  }
+}
+
+.item-content-header > p {
+  margin-bottom: 1.4rem;
+}
+
+.job {
+  display: none;
+  @media (min-width: $md) {
+    display: block;
+  }
+}
+
+// Item body header
+.item-body-header {
+  color: $ter;
+  display: grid;
+  @media (min-width: $md) {
+    grid-template-columns: 2fr 1fr;
+    margin-bottom: 4rem;
+  }
+}
+
+.item-body-info {
+  @media (min-width: $md) {
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+  }
+}
+
+.meta-item {
+  margin-bottom: .8rem;
+}

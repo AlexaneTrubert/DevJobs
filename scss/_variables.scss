@@ -1,0 +1,59 @@
+$sm: 375px;
+$md: 768px;
+$lg: 1440px;
+$xl: 75em;
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary: rgb(25, 32, 45);
+    --secondary: rgb(255, 255, 255);
+    --ter: rgb(110, 128, 152);
+    --background: rgb(18, 23, 33);
+    --icon: rgb(255, 255, 255);
+    --quat: rgb(255, 255, 255, .1);
+    --compagny-btn-txt: rgb(255, 255, 255);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --primary: rgb(255, 255, 255);
+    --secondary: rgb(25, 32, 45);
+    --ter: rgb(157, 174, 194);
+    --background: rgb(244, 246, 248);
+    --icon: rgb(157, 174, 194);
+    --quat: rgb(89, 100, 224, .1);
+    --compagny-btn-txt: rgb(89, 100, 224);
+  }
+}
+
+body.dark {
+  --primary: rgb(25, 32, 45);
+  --secondary: rgb(255, 255, 255);
+  --ter: rgb(110, 128, 152);
+  --background: rgb(18, 23, 33);
+  --icon: rgb(255, 255, 255);
+  --quat: rgb(255, 255, 255, .1);
+  --compagny-btn-txt: rgb(255, 255, 255);
+}
+
+body.light {
+  --primary: rgb(255, 255, 255);
+  --secondary: rgb(25, 32, 45);
+  --ter: rgb(157, 174, 194);
+  --background: rgb(244, 246, 248);
+  --icon: rgb(157, 174, 194);
+  --quat: rgb(89, 100, 224, .1);
+  --compagny-btn-txt: rgb(89, 100, 224);
+}
+
+$primary: var(--primary);
+$secondary: var(--secondary);
+$ter: var(--ter);
+$compagny_btn: var(--quat);
+$compagny-btn-txt: var(--compagny-btn-txt);
+$bg: var(--background);
+$violet: rgb(89, 100, 224);
+$light-violet: rgb(147, 155, 244);
+$white: rgb(255, 255, 255);
+$icon: var(--icon);

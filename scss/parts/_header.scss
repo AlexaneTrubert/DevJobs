@@ -1,0 +1,32 @@
+.header-container {
+  width: 100%;
+  padding: 0 24px;
+  @media only screen and (min-width: $md) {
+    padding-inline: 1rem;
+  }
+  @media only screen and (min-width: $lg) {
+    max-width: 116rem;
+    margin: 0 auto;
+    padding-inline: 2.5rem;
+  }
+}
+
+// C'est ici qu'on va définir la taille du header
+.main-nav {
+  padding: 32px 0 72px 0;
+  display: flex;
+  justify-content: space-between;
+  @media only screen and (min-width: $md) {
+    padding: 42px 0 86px 0;
+  }
+  @media only screen and (min-width: $lg) {
+    padding: 44px 0 86px 0;
+  }
+}
+
+.logo {
+  min-width: 11rem;
+}
+
+
+

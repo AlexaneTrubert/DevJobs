@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en" class="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dev Jobs</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="assets/favicon-32x32.png" type="image/png">
+</head>
+<body>
+<ul class="skip">
+    <li class="skip-item"><a href="" class="skip-link"></a></li>
+    <li class="skip-item"><a href="#main-content" class="skip-link"></a></li>
+</ul>
+
+<header class="main-header">
+    <div class="container header-container">
+        <nav class="main-nav">
+            <div class="logo">
+                <a href="index.html"><img src="assets/desktop/logo.svg" alt="" class="logo-img"></a>
+            </div>
+            <div class="toggle">
+                <img src="assets/desktop/icon-sun.svg" class="toggle-icons sun-toggle">
+                <label class="switch">
+                    <input type="checkbox" id="checkbox">
+                    <span></span>
+                </label>
+                <img src="assets/desktop/icon-moon.svg" class="toggle-icons moon-toggle">
+            </div>
+        </nav>
+    </div>
+</header>
+
+<main class="main-content">
+    <section class="item-body">
+        <div class="container item-container">
+            <template id="item_template">
+                <div class="item-content item-content-header">
+                    <div class="item-content-info">
+                        <div class="item-content-info-txt">
+                            <h2>Scoot</h2>
+                            <p id="title-entreprise">scoot.com</p>
+                        </div>
+                        <a href="" alt="Link to website compagny" class="btn btn-secondary btn-compagny-site">Compagny
+                            Site</a>
+                    </div>
+                    <img src="https://ecf-dwwm.cefim-formation.org" alt="" class="logo-item logo-card-item"
+                         style="background-color: #E99210">
+                </div>
+
+                <div class="item-content item-content-body">
+                    <div class="item-body-header">
+                        <div class="item-body-info">
+                            <span class="meta meta-item">1w ago &middot; Part time</span>
+                            <h3 class="h2-like">Senior Software Engineer</h3>
+                            <a href="#" class="country-link" alt="">United Kingdom</a>
+                        </div>
+                        <a href="" class="btn btn-primary btn-item-apply">Apply Now</a>
+                    </div>
+                    <p id="description">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit.
+                        Pellentesque
+                        aliquet
+                        nibh
+                        nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula
+                        sollicitudin
+                        laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut
+                        justo.
+                        Suspendisse potenti. Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus
+                        metus
+                        libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed
+                        lectus.
+                        Praesent elementum hendrerit tortor. Sed semper lorem at felis. Vestibulum volutpat, lacus a
+                        ultrices
+                        sagittis, mi neque euismod dui, eu pulvinar nunc sapien ornare nisl. Phasellus pede arcu,
+                        dapibus
+                        eu,
+                        fermentum et, dapibus sed, urna.</p>
+
+                    <h3 class="h3-content-subtitle">Requirements</h3>
+                    <p id="requirements">Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a
+                        ullamcorper laoreet,
+                        lectus
+                        arcu
+                        pulvinar risus, vitae facilisis libero dolor a purus. Sed vel lacus. Mauris nibh felis,
+                        adipiscing
+                        varius, adipiscing in, lacinia vel, tellus. Suspendisse ac urna. Etiam pellentesque mauris ut
+                        lectus.
+                        Nunc tellus ante, mattis eget, gravida vitae, ultricies ac, leo. Integer leo pede, ornare a,
+                        lacinia
+                        eu,
+                        vulputate vel, nisl.</p>
+
+                    <ul class="requirements-list" id="requirements-list">
+                    </ul>
+
+                    <h3 class="h3-content-subtitle">What You Will Do</h3>
+
+                    <p id="role">Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus
+                        libero eu
+                        augue.
+                        Morbi
+                        purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum
+                        hendrerit tortor. Sed semper lorem at felis. Vestibulum volutpat, lacus a ultrices sagittis, mi
+                        neque
+                        euismod dui, eu pulvinar nunc sapien ornare nisl. Phasellus pede arcu, dapibus eu, fermentum et,
+                        dapibus
+                        sed, urna.</p>
+
+                    <ol class="list" id="role-list">
+                    </ol>
+                </div>
+            </template>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container footer-container">
+        <template id="template-footer">
+            <div class="job">
+                <h3>Senior Software Engineer</h3>
+                <span>So Digital Inc.</span>
+            </div>
+            <a href="" class="btn btn-primary btn-footer">Apply Now</a>
+        </template>
+    </div>
+</footer>
+
+<script src="js/api.js"></script>
+<script src="js/dom.js"></script>
+<script src="js/jobs.js"></script>
+<script src="js/switch.js"></script>
+</body>
+</html>
