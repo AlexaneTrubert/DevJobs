@@ -68,21 +68,14 @@ p {
   line-height: 2.6rem;
 }
 
-ul, ol {
+ul.requirements-list, ol {
   color: $ter;
   font-size: 1.6rem;
   line-height: 2.6rem;
   margin-top: 3.2rem;
 }
 
-ul, ol {
-  color: $ter;
-  font-size: 1.6rem;
-  line-height: 2.6rem;
-  margin-top: 3.2rem;
-}
-
-ul > li {
+ul.requirements-list > li {
   list-style: outside;
   margin-inline-start: 2.4rem;
   padding-inline-start: 2.4rem;
@@ -92,13 +85,13 @@ li::marker {
   color: $violet;
 }
 
-ol > li {
+ol.list > li {
   margin-inline-start: 2.4rem;
   padding-inline-start: 2.4rem;
   counter-increment: li;
 }
 
-ol > li::marker {
+ol.list > li::marker {
   content: counter(li);
   font-weight: 700;
 }
