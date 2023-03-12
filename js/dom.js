@@ -28,13 +28,13 @@ function addJobs(company, contract, id, localisation, logo, logoBackground, posi
 }
 
 function addItem(data) {
-    console.log(data);
     const mainContent = document.querySelector(".item-container");
     const mainFooter = document.querySelector(".footer-container");
     const templateFooter = document.querySelector("#template-footer");
     const cloneFooter = templateFooter.content.cloneNode(true);
     const template = document.querySelector("#item_template");
     const clone = template.content.cloneNode(true);
+    const datePost = timestamp(data.postedAt);
 
     // Le main content à cloner
     const h2 = clone.querySelector("h2");
@@ -51,7 +51,7 @@ function addItem(data) {
     logoEntreprise.style.backgroundColor = data.logoBackground;
 
     const meta = clone.querySelector(".meta-item");
-    meta.textContent = data.postedAt + " \u2022\ " + data.contract;
+    meta.textContent = datePost + " \u2022\ " + data.contract;
 
     const h3 = clone.querySelector("h3");
     h3.textContent = data.position;
