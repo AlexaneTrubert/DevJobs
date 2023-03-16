@@ -6,14 +6,14 @@ const limit = 12;
 form.addEventListener("submit", function (ev) {
     ev.preventDefault();
     mainContent.innerHTML = "";
-    offsetJob = 0;
+    let offsetJob = 0;
 
     const text = document.querySelector(".filter-title").value;
     const jobLocation = document.querySelector("#location").value;
     const fulltime = document.querySelector(".checkbox");
 
     getAllJobs(
-        0,
+        offsetJob,
         function (data) {
             offsetJob += data.jobs.length;
             data.jobs.forEach(jobs => {

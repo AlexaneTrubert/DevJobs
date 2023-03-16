@@ -53,7 +53,7 @@ function timestamp(timestamp) {
     let mn = Math.floor(seconds / 60);
     let s = Math.floor(seconds % 60);
 
-    if(y > 2) {
+    if (y> 2) {
         value = "A long time";
         unit = "";
     }
