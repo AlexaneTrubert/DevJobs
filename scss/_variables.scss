@@ -12,6 +12,7 @@ $xl: 75em;
     --icon: rgb(255, 255, 255);
     --quat: rgb(255, 255, 255, .1);
     --compagny-btn-txt: rgb(255, 255, 255);
+    --checkbox: rgb(255, 255, 255, .1);
   }
 }
 
@@ -24,6 +25,7 @@ $xl: 75em;
     --icon: rgb(157, 174, 194);
     --quat: rgb(89, 100, 224, .1);
     --compagny-btn-txt: rgb(89, 100, 224);
+    --checkbox: rgb(25, 32, 45, .1);
   }
 }
 
@@ -35,6 +37,7 @@ body.dark {
   --icon: rgb(255, 255, 255);
   --quat: rgb(255, 255, 255, .1);
   --compagny-btn-txt: rgb(255, 255, 255);
+  --checkbox: rgb(255, 255, 255, .1);
 }
 
 body.light {
@@ -45,6 +48,7 @@ body.light {
   --icon: rgb(157, 174, 194);
   --quat: rgb(89, 100, 224, .1);
   --compagny-btn-txt: rgb(89, 100, 224);
+  --checkbox: rgb(25, 32, 45, .1);
 }
 
 $primary: var(--primary);
@@ -57,3 +61,4 @@ $violet: rgb(89, 100, 224);
 $light-violet: rgb(147, 155, 244);
 $white: rgb(255, 255, 255);
 $icon: var(--icon);
+$checkbox: var(--checkbox);
