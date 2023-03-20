@@ -26,7 +26,8 @@ h5,
   color: $secondary;
 }
 
-h1 {
+h1,
+.h1-like {
   font-size: 2.8rem;
   line-height: 3.4rem;
 }
@@ -67,36 +68,32 @@ p {
   line-height: 2.6rem;
 }
 
-ul, ol {
+ul.requirements-list, ol {
   color: $ter;
   font-size: 1.6rem;
   line-height: 2.6rem;
   margin-top: 3.2rem;
 }
 
-ul.requirements-list li:before {
-  content: "\2022";
+ul.requirements-list > li {
+  list-style: outside;
+  margin-inline-start: 2.4rem;
+  padding-inline-start: 2.4rem;
+}
+
+li::marker {
   color: $violet;
-  margin-right: 3.2rem;
 }
 
-ol.list {
-  counter-reset: li;
-}
-
-ol.list li::before {
-  content: counter(li);
-  color: $violet;
-  display: inline-block;
-  margin-right: 3.2rem;
-}
-
-li {
+ol.list > li {
+  margin-inline-start: 2.4rem;
+  padding-inline-start: 2.4rem;
   counter-increment: li;
 }
 
-ul li:first-line, ol li:first-line {
-  text-indent: -32px;
+ol.list > li::marker {
+  content: counter(li);
+  font-weight: 700;
 }
 
 span {

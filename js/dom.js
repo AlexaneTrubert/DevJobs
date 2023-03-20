@@ -20,6 +20,19 @@ function addJobs(company, contract, id, localisation, logo, logoBackground, posi
 
     const address = clone.querySelector(".card-link_location");
     address.textContent = localisation;
+    address.addEventListener("click", function () {
+        let offsetJob = 0;
+        getJobsFromCountry(offsetJob, localisation, loadMoreBtn, function (data) {
+            mainContent.innerHTML="";
+                data.jobs.forEach(jobs => {
+                    offsetJob += data.jobs.length;
+                    addJobs(jobs.company, jobs.contract, jobs.id, jobs.location, jobs.logo, jobs.logoBackground, jobs.position, jobs.postedAt);
+                });
+            },
+            function () {
+                alert("Erreur !");
+            })
+    })
 
     const urlDetail = clone.querySelector("#linkToDetail");
     urlDetail.href = "item.html?id=" + id;
@@ -28,13 +41,13 @@ function addJobs(company, contract, id, localisation, logo, logoBackground, posi
 }
 
 function addItem(data) {
-    console.log(data);
     const mainContent = document.querySelector(".item-container");
     const mainFooter = document.querySelector(".footer-container");
     const templateFooter = document.querySelector("#template-footer");
     const cloneFooter = templateFooter.content.cloneNode(true);
     const template = document.querySelector("#item_template");
     const clone = template.content.cloneNode(true);
+    const datePost = timestamp(data.postedAt);
 
     // Le main content à cloner
     const h2 = clone.querySelector("h2");
@@ -51,7 +64,7 @@ function addItem(data) {
     logoEntreprise.style.backgroundColor = data.logoBackground;
 
     const meta = clone.querySelector(".meta-item");
-    meta.textContent = data.postedAt + " \u2022\ " + data.contract;
+    meta.textContent = datePost + " \u2022\ " + data.contract;
 
     const h3 = clone.querySelector("h3");
     h3.textContent = data.position;

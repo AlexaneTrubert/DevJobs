@@ -62,6 +62,7 @@
   &-footer {
     min-width: 100%;
     align-self: center;
+    text-align: center;
     @media (min-width: $md) {
       min-width: 4.8rem;
       justify-self: end;
@@ -71,6 +72,7 @@
   &-item-apply {
     margin-top: 5rem;
     margin-bottom: 3.2rem;
+    text-align: center;
     @media (min-width: $md) {
       align-self: center;
       justify-self: center;
