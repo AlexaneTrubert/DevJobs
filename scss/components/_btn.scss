@@ -52,7 +52,7 @@
   }
 
   &-modal {
-    @media (max-width: $sm) {
+    @media (min-width: $sm) {
       justify-self: center;
       max-width: 87%;
       max-height: none;

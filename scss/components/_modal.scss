@@ -4,23 +4,25 @@
     display: flex;
     justify-content: space-between;
     width: 70%;
+    position: relative;
+    top: 0;
+    padding: 0;
+    min-width: auto;
   }
 }
 
 .form-group-modal {
-  @media (max-width: $sm) {
+  @media (min-width: $sm) {
     position: absolute;
-    bottom: -106vw;
-    left: 50%;
-    min-height: 100%;
+    top: 41vw;
+    justify-self: center;
     min-width: 87%;
-    padding-bottom: 2.4rem;
     display: grid;
     gap: 2.4rem;
-    transform: translate(-50%, -50%);
     background-color: $primary;
     border-radius: 6px;
     z-index: 10;
+    padding: 2.4rem;
   }
   @media (min-width: $md) {
     display: none;
@@ -28,18 +30,19 @@
 }
 
 .form-group-location {
-  @media (max-width: $sm) {
-    padding: 2.4rem;
+  @media (min-width: $sm) {
+    padding-bottom: 2.4rem;
     border-bottom: 1px solid rgb($light-violet, .2);
     display: flex;
     gap: 1.6rem;
   }
   @media (min-width: $md) {
     border-right: 1px solid rgb($light-violet, .2);
-    display: flex;
+    padding-top: 2.4rem;
     align-self: center;
     height: 8rem;
     max-width: 20rem;
+    border-bottom: none;
   }
   @media (min-width: $lg) {
     max-width: 45%;
